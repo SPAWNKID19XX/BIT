@@ -1,8 +1,23 @@
 #root {
-  max-width: 1280px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.container {
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1440px;
+}
+
+/* 4K */
+@media (min-width: 2560px) {
+  .container { max-width: 1800px; }
+}
+
+/* Small mobile */
+@media (max-width: 479px) {
+  .container { width: 94%; }
 }
 
 .logo {
