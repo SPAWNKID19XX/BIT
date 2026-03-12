@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
         <nav className={styles.navbar}>
             <div className={styles.logo_section}>
                 <a href="/">
-                    <img src="/src/assets/logo2.png" alt="Logo" />
+                    <img src="/src/assets/logo.png" alt="Logo" />
                 </a>
              </div>
             <div className={styles.links_section}>
