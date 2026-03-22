@@ -67,30 +67,36 @@ export const Partfolio = () => {
         </div>
         <div className={styles.skils}>
           <h3>Skils</h3>
-          <h4>Backend</h4>
-          <ul>
-            <li>Python</li>
-            <li>Django</li>
-            <li>Flask</li>
-            <li>PostgreSQL</li>
-          </ul>
-          <h4>Frontend</h4>
-          <ul>
-            <li>TypeScript</li>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React</li>
-          </ul>
-          <h4>Others</h4>
-          <ul>
-            <li>Docker</li>
-            <li>GitHub</li>
-            <li>Linux</li>
-            <li>Postman</li>
-            <li>QA</li>
-            <li>LLM</li>
-          </ul>
+          <div className={styles.skils_group}>
+            <h4>Backend</h4>
+            <ul>
+              <li>Python</li>
+              <li>Django</li>
+              <li>Flask</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+          <div className={styles.skils_group}>
+            <h4>Frontend</h4>
+            <ul>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>React</li>
+            </ul>
+          </div>
+          <div className={styles.skils_group}>
+            <h4>Others</h4>
+            <ul>
+              <li>Docker</li>
+              <li>GitHub</li>
+              <li>Linux</li>
+              <li>Postman</li>
+              <li>QA</li>
+              <li>LLM</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div >

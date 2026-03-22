@@ -36,6 +36,7 @@
 .portfolio_item .img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .links_button {
@@ -65,23 +66,213 @@
 
 .skils {
   width: 13%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .skils h3 {
-  margin-bottom: 0px;
+  margin: 0 0 4px 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #2EB2F5;
+}
+
+.skils_group {
+  background-color: #1f2028;
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(46, 178, 245, 0.12);
+  border-top: 2px solid #2EB2F5;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skils_group:hover {
+  transform: translateY(-4px);
+  border-color: rgba(46, 178, 245, 0.4);
+  box-shadow: 0 8px 20px rgba(46, 178, 245, 0.1);
 }
 
 .skils h4 {
-  margin: 0px 5px;
+  margin: 0 0 8px 0;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .skils ul {
-  margin: 0 0 10px 0;
+  margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
 }
 
 .skils li {
-  margin-left: 15px;
-  padding: 0;
-  list-style: none;
+  background: rgba(46, 178, 245, 0.08);
+  border: 1px solid rgba(46, 178, 245, 0.2);
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Responsive: Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+        padding: 15px;
+    }
+
+    .portfolio {
+        flex-direction: column;
+    }
+
+    .portfolio_list {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .portfolio_item {
+        width: 100%;
+    }
+
+    .skils {
+        width: 100%;
+        margin-top: 24px;
+    }
+}
+
+/* ── Responsive: Phablet (481px – 768px) ── */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .portfolio {
+        flex-direction: column;
+    }
+
+    .portfolio_list {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .portfolio_item {
+        width: 100%;
+    }
+
+    .skils {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .skils h3 {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .skils_group {
+        flex: 1 1 calc(33% - 12px);
+        min-width: 140px;
+    }
+}
+
+/* ── Responsive: Tablet small (769px – 900px) — 2 карточки + 1 внизу ── */
+@media (min-width: 769px) and (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+
+    .portfolio {
+        flex-direction: column;
+    }
+
+    .portfolio_list {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .portfolio_item {
+        width: calc(50% - 8px);
+    }
+
+    .portfolio_item:last-child {
+        width: 100%;
+    }
+
+    .skils {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .skils h3 {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .skils_group {
+        flex: 1 1 calc(33% - 12px);
+        min-width: 140px;
+    }
+}
+
+/* ── Responsive: Tablet large (901px – 1024px) — 3 колонки ── */
+@media (min-width: 901px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .portfolio {
+        flex-direction: column;
+    }
+
+    .portfolio_list {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .portfolio_item {
+        width: 32%;
+    }
+
+    .skils {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .skils h3 {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .skils_group {
+        flex: 1 1 calc(33% - 12px);
+        min-width: 140px;
+    }
+}
+
+/* ── Responsive: Laptop (1025px – 1440px) ── */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .portfolio_list {
+        gap: 12px;
+    }
 }

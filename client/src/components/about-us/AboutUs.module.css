@@ -32,27 +32,100 @@
   justify-content: space-around;
   margin-top: 20px;
 }
+
 .card {
   background-color: #1f2028;
   border-radius: 10px;
   width: 30%;
-  text-align: center;
   text-align: left;
 }
 
 .hard_skils h4 {
-    padding: 0;
-  margin: 0;
-}
-
-.hard_skils ul {
-  list-style-type: none;
-  padding: 10px;
+  padding: 0;
   margin: 0;
 }
 
 .hard_skils ul {
   list-style-type: none;
   padding: 0px 10px;
+  margin: 0;
 }
 
+/* ── Responsive: Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .about_us_section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my_picture {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 300px;
+    }
+
+    .hard_skils {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* ── Responsive: Mobile large / phablet (481px – 768px) ── */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 88%;
+    }
+
+    .about_us_section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my_picture {
+        width: 260px;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hard_skils {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* ── Responsive: Tablet (769px – 1024px) ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .my_picture {
+        width: 220px;
+        height: 300px;
+    }
+
+    .hard_skils {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .card {
+        width: calc(50% - 7px);
+    }
+}

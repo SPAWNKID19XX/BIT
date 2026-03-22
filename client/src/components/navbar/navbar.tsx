@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from "./navbar.module.css"
 
 export const Navbar: React.FC = () => {
@@ -15,6 +15,7 @@ export const Navbar: React.FC = () => {
         { name: "Contacts", href: "/contact" }
     ];
 
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
 
@@ -25,19 +26,30 @@ export const Navbar: React.FC = () => {
                     <img src="/src/assets/logo.png" alt="Logo" />
                 </a>
              </div>
-            <div className={styles.links_section}>
-                
+
+            <button
+                className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+                onClick={() => setMenuOpen(prev => !prev)}
+                aria-label="Toggle navigation menu"
+                aria-expanded={menuOpen}
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div className={`${styles.links_section} ${menuOpen ? styles.menu_open : ""}`}>
                 <ul className={styles.nav_links}>
                     {navLinks.map((link, index) => (
                         <li key={index}>
-                            <a href={link.href}>{link.name}</a>
+                            <a href={link.href} onClick={() => setMenuOpen(false)}>{link.name}</a>
                         </li>
                     ))}
                 </ul>
                 <div className={styles.button_section}>
                     <button>Get in Touch</button>
                 </div>
-            </div>            
+            </div>
         </nav>
     </div>
 

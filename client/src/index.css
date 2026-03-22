@@ -51,6 +51,20 @@ body {
   :root { font-size: 18px; }
 }
 
+/* ── Responsive: Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  body {
+    min-width: 320px;
+  }
+}
+
+/* ── Responsive: Mobile large / phablet (481px – 768px) ── */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    min-width: 350px;
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
